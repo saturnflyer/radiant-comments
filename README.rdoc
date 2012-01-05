@@ -11,27 +11,27 @@ If you want to contribute features or fixes please write your specs and code and
 
 == Dependencies
 
-* Requires Radiant 0.7.1 or greater.
-* Requires will_paginate Rails plugin (http://github.com/mislav/will_paginate/tree/master)
-* Requires fastercsv 1.2.3 or greater.
-* Requires sanitize 1.0.8 or greater.
-* Requires mollom 0.2.2 or greater.
+Version 1.x requires Radiant 1.x or greater. Older gem releases work with older Radiant releases.
 
-== Installation 
+There are also git tags which match the Radiant version the tag is known to work with. 
+Users of pre 1.x versions will also need to manually install the fastercsv, mollom and sanitize gems.
 
-To install Comments, run: 
+== Installation
 
-  rake radiant:extensions:comments:install
+Add `gem "radiant-comments-extension", "~> 1.0"` to your Gemfile then run:
+
+  bundle install
+  bundle exec rake radiant:extensions:comments:install
 
 This _WILL_ delete any snippets named 'comment', 'comments' and 'comment_form' if these exist.
 
 If you are upgrading from a previous version with out the sanitizer run:
 
-  rake radiant:extensions:comments:initialize
+  bundle exec rake radiant:extensions:comments:initialize
 
 or if you want to clean up your initializer for the sanitize gem run:
 
-  rake radiant:extensions:comments:forced_initialize
+  bundle exec rake radiant:extensions:comments:forced_initialize
 
 == More Help
 
@@ -55,7 +55,7 @@ See the included HELP docs here or read them in your Radiant interface with the 
 * Sean Cribbs, partly sponsored by http://opscode.com/
 * Ryan Heneise
 
-If you contribute, go ahead and add your name to the list! 
+If you contribute, go ahead and add your name to the list!
 
 == Credits
 
