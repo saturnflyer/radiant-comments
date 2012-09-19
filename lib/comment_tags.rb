@@ -68,7 +68,7 @@ module CommentTags
       tag.locals.index = index
       result << tag.expand
     end
-    result
+    result.flatten.join
   end
 
   desc %{
@@ -354,7 +354,7 @@ module CommentTags
       tag.locals.page = comment.page
       result << tag.expand
     end
-    result
+    result.flatten.join
   end
   
   desc %{
